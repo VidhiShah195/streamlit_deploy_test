@@ -17,7 +17,7 @@ def load_file(penguin_file):
         penguins_df = pd.read_csv('penguins.csv')
     return(penguins_df)
 
-penguin_file = load_file(penguin_file)
+penguin_df = load_file(penguin_file)
 
 
 selected_x_var = st.selectbox('What do you want the x variable to be?',['bill_length_mm', 'bill_depth_mm', 'flipper_length_mm', 'body_mass_g'])
