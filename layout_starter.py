@@ -17,3 +17,13 @@ if user_name != '';
   st.write(f'Hello {user_name}')
 else:
   set.write('Enter Your Name')
+
+if user_emoji != '';
+  st.write(f"{user_emoji} is {user_name}'s favorite emoji")
+else:
+  set.write('Choose an emoji')
+
+if user_food != '';
+  st.write(f"{user_food} is {user_name}'s favorite food")
+else:
+  set.write('Enter Your Favorite Food')

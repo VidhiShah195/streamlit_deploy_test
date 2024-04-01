@@ -42,3 +42,34 @@ alt_chart = (
     .interactive()
     )
 st.altair_chart(alt_chart, use_container_width=True)
+
+
+import streamlit as st
+
+st.set_page_config(layout="wide")
+
+st.title('How to layout your Streamlit app')
+
+with st.expander('About this app'):
+  st.write('This app shows the various ways on how you can layout your Streamlit app.')
+  st.image('https://streamlit.io/images/brand/streamlit-logo-secondary-colormark-darktext.png', width=250)
+
+st.sidebar.header('Input')
+user_name = st.sidebar.text_input('What is your name?')
+user_emoji = st.sidebar.selectbox('Choose an emoji', ['','😄', '😆', '😊', '😍', '😴', '😕', '😱'])
+user_food = st.sidebar.selectbox('What is your favorite food?', ['', 'Tom Yum Kung', 'Burrito', 'Lasagna', 'Hamburger', 'Pizza']) 
+
+if user_name != '':
+  st.write(f'Hello {user_name}')
+else:
+  set.write('Enter Your Name')
+
+if user_emoji != '':
+  st.write(f"{user_emoji} is {user_name}'s favorite emoji")
+else:
+  set.write('Choose an emoji')
+
+if user_food != '':
+  st.write(f"{user_food} is {user_name}'s favorite food")
+else:
+  set.write('Enter Your Favorite Food')
