@@ -59,17 +59,23 @@ user_name = st.sidebar.text_input('What is your name?')
 user_emoji = st.sidebar.selectbox('Choose an emoji', ['','😄', '😆', '😊', '😍', '😴', '😕', '😱'])
 user_food = st.sidebar.selectbox('What is your favorite food?', ['', 'Tom Yum Kung', 'Burrito', 'Lasagna', 'Hamburger', 'Pizza']) 
 
-if user_name != '':
-  st.write(f'Hello {user_name}')
-else:
-  set.write('Enter Your Name')
 
-if user_emoji != '':
-  st.write(f"{user_emoji} is {user_name}'s favorite emoji")
-else:
-  set.write('Choose an emoji')
+col1,col2,col3 = st.columns(3)
 
-if user_food != '':
-  st.write(f"{user_food} is {user_name}'s favorite food")
-else:
-  set.write('Enter Your Favorite Food')
+with col1:
+    if user_name != '':
+        st.write(f'Hello {user_name}')
+    else:
+        set.write('Enter Your Name')
+
+with col2:
+    if user_emoji != '':
+        st.write(f"{user_emoji} is {user_name}'s favorite emoji")
+    else:
+        set.write('Choose an emoji')
+
+with col3:
+    if user_food != '':
+        st.write(f"{user_food} is {user_name}'s favorite food")
+    else:
+        set.write('Enter Your Favorite Food')
