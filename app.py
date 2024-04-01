@@ -88,7 +88,6 @@ penguins_df = pd.read_csv("penguins.csv")
 penguins_df = penguins_df[penguins_df["species"] == selected_species]
 alt_chart = ( alt.Chart(penguins_df, title=f"Scatterplot of {selected_species}Penguins")
  .mark_circle()
-Chapter 2 31
  .encode(
  x=selected_x_var,
  y=selected_y_var,
