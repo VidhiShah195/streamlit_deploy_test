@@ -109,7 +109,7 @@ with tab1:
     with col2:
         st.write('This is my column 2')
     with col3:
-        st.write('This is my column 2'
+        st.write('This is my column 2')
 with tab2:
     if user_emoji != '':
         st.write(f"{user_emoji} is {user_name}'s favorite emoji")
